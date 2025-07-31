@@ -1,0 +1,128 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Header Section */
+header {
+  height: 100vh;
+  background: url('https://source.unsplash.com/1600x900/?travel') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+header .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.slide-down {
+  font-size: 3em;
+  animation: slideDown 1s ease-out;
+}
+
+.fade-in {
+  font-size: 1.3em;
+  margin: 10px 0 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.cta-btn {
+  background: #ff9800;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #e68900;
+}
+
+/* Sections */
+section {
+  padding: 60px 10%;
+  background: white;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 1000px;
+  animation: fadeInUp 1s ease-out;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #003366;
+  color: white;
+}
+
+/* Animations */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
